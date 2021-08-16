@@ -9,9 +9,6 @@ module.exports = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles/scss/core')],
 	},
-	images: {
-		domains: ['dev.intermobile.com.br', 'wp-headless-boilerplate.local'],
-	},
 	webpack: (config, { isServer }) => {
 		// SITEMAP GENERATION
 		/* if (isServer) {

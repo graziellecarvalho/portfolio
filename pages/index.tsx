@@ -1,9 +1,9 @@
 // External dependencies
-import React from 'react';
-import { InferGetStaticPropsType } from 'next';
+import React from "react";
+import { InferGetStaticPropsType } from "next";
 
 // Internal modules
-import HomeLayout from '@/layouts/home';
+import HomeLayout from "@/layouts/home";
 // import { getRouteData } from '@/data/routes';
 
 // Get data during buid to pass as props to the page
@@ -22,7 +22,11 @@ import HomeLayout from '@/layouts/home';
 // }
 
 function HomePage() {
-	return <HomeLayout />;
+  return (
+    <>
+      <HomeLayout />
+    </>
+  );
 }
 
 export default HomePage;

@@ -75,11 +75,16 @@ $cyan: #17a2b8 !default;
 // );
 
 // Brand colors
-$_b-blue: #0073aa;
+$portfolio-blue: #1a2d71;
+$portfolio-pink: #ff2e93;
+$portfolio-gray: #626262;
+$portfolio-green: #00e6b3;
 
 // Theme colors
-$primary: $_b-blue;
-$secondary: $gray-600 !default;
+$primary: $portfolio-blue;
+$secondary: $portfolio-pink !default;
+$tertiary: $portfolio-green !default;
+$gray: $portfolio-gray;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -99,13 +104,16 @@ $linkedin: #0b66c2;
 
 $theme-colors: ();
 $theme-colors: map-merge(
-	(
-		'primary': $primary,
-		'light': $light,
-		'medium': $medium,
-		'dark': $dark,
-	),
-	$theme-colors
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "gray": $gray,
+    "light": $light,
+    "medium": $medium,
+    "dark": $dark,
+  ),
+  $theme-colors
 );
 
 // Set a specific jump point for requesting color jumps
@@ -146,33 +154,33 @@ $spacer: 1rem;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
-	(
-		0: 0,
-		1: $spacer * 0.25,
-		2: $spacer * 0.5,
-		3: $spacer * 0.75,
-		4: $spacer,
-		5: $spacer * 1.5,
-		6: $spacer * 2,
-		7: $spacer * 2.75,
-		8: $spacer * 3.5,
-		9: $spacer * 5,
-	),
-	$spacers
+  (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer * 0.75,
+    4: $spacer,
+    5: $spacer * 1.5,
+    6: $spacer * 2,
+    7: $spacer * 2.75,
+    8: $spacer * 3.5,
+    9: $spacer * 5,
+  ),
+  $spacers
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
-	(
-		25: 25%,
-		50: 50%,
-		75: 75%,
-		100: 100%,
-		auto: auto,
-	),
-	$sizes
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
 );
 
 // Body
@@ -283,9 +291,9 @@ $sizes: map-merge(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-	'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-	'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
