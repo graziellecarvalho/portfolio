@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Component = styled.div``;
 
+export const lightClass = 'light';
+
 export const Title = styled.h2`
   position: relative;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
@@ -16,5 +18,10 @@ export const Title = styled.h2`
     position: absolute;
     z-index: -1;
     bottom: 6px;
+  } 
+
+  &.${lightClass} {
+      text-shadow: 2px 0 0 #1a2d71, -2px 0 0 #1a2d71, 0 2px 0 #1a2d71, 0 -2px 0 #1a2d71,
+    1px 1px #1a2d71, -1px -1px 0 #1a2d71, 1px -1px 0 #1a2d71, -1px 1px 0 #1a2d71;
   }
 `;
