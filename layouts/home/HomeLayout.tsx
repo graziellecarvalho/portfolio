@@ -127,7 +127,35 @@ export const HomeLayout = () => {
           ]}
         />
 
-        <Projects />
+        <Projects
+            projects={[
+                {
+                    image: {
+                        src: '/images/temp/project.png',
+                        alt: 'Project',
+                        width: 579,
+                        height: 361,
+                    },
+                    title: 'Project title',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus ex euismod leo semper, ac sagittis urna molestie. Donec vitae <strong>lorem pellentesque, viverra est vel,</strong> molestie justo. Nam nibh leo, faucibus nec neque sed, efficitur pulvinar orci. Aliquam eget velit elit. Integer ac euismod erat. Nullam placerat et augue at sollicitudin. ',
+                    link: {
+                        text: 'Repository',
+                        href: '#',
+                        target: '_blank',
+                    }
+                },
+                {
+                    image: {
+                        src: '/images/temp/project.png',
+                        alt: 'Project',
+                        width: 579,
+                        height: 361,
+                    },
+                    title: 'Project title',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus ex euismod leo semper, ac sagittis urna molestie. Donec vitae lorem pellentesque, viverra est vel, molestie justo. Nam nibh leo, faucibus nec neque sed, efficitur pulvinar orci. Aliquam eget velit elit. Integer ac euismod erat. Nullam placerat et augue at sollicitudin. ',
+                },
+            ]}
+        />
 
         <About />
       </Container>

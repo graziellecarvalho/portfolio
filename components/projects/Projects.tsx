@@ -13,21 +13,17 @@ interface Props extends ProjectsProps {
   cssClass?: string;
 }
 
-export const Projects = ({ cssClass = "" }: Props) => {
+export const Projects = ({ cssClass = "", projects }: Props) => {
   return (
     <Component className={`${cssClass} py-9`}>
-      <SectionTitle title="Projects" />
+      <SectionTitle title="Projects" cssClass="mb-6" />
 
-      <ProjectInfo
-        image={{
-          src: "/images/temp/project.png",
-          width: 579,
-          height: 361,
-          alt: "Project",
-        }}
-        title="Pokemon"
-        description="teste"
-      />
+      {projects.map((props, index) => (
+        <ProjectInfo
+            {...props}
+            position={(index + 1) % 2 ? '' : 'odd'}
+        />
+      ))}
     </Component>
   );
 };
