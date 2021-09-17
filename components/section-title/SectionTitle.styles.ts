@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { themeColors } from "../../styles/theme/index";
+import { rem } from "polished";
 
 export const Component = styled.div``;
 
-export const lightClass = 'light';
+export const lightClass = "light";
 
 export const Title = styled.h2`
   position: relative;
@@ -17,11 +19,13 @@ export const Title = styled.h2`
     left: 0;
     position: absolute;
     z-index: -1;
-    bottom: 6px;
-  } 
+    bottom: ${rem(6)};
+  }
 
   &.${lightClass} {
-      text-shadow: 2px 0 0 #1a2d71, -2px 0 0 #1a2d71, 0 2px 0 #1a2d71, 0 -2px 0 #1a2d71,
-    1px 1px #1a2d71, -1px -1px 0 #1a2d71, 1px -1px 0 #1a2d71, -1px 1px 0 #1a2d71;
+    text-shadow: 2px 0 0 #1a2d71, -2px 0 0 #1a2d71, 0 2px 0 #1a2d71,
+      0 -2px 0 #1a2d71, 1px 1px #1a2d71, -1px -1px 0 #1a2d71, 1px -1px 0 #1a2d71,
+      -1px 1px 0 #1a2d71;
+    z-index: 2;
   }
 `;

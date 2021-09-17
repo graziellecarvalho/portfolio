@@ -5,5 +5,6 @@ export interface ProjectInfoProps {
   image: ImageProps;
   title: string;
   description: string;
-  link?: LinkProps;
+  repositoryLink?: LinkProps;
+  designLink?: LinkProps;
 }

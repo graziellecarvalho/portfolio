@@ -12,6 +12,8 @@ import {
   ImageSemicircle,
   ProfilePic,
   ImageTextblock,
+  ProfileInfo,
+  ImageSection
 } from "./Profile.style";
 import { ProfileProps } from "./Profile.types";
 
@@ -31,49 +33,51 @@ export const Profile = ({
       <Component className={`${cssClass}`}>
         <Container>
           <Row className="align-items-center">
-            <Col sm={12} md={5} className="mb-4 mb-md-0">
-              <ProfilePic>
-                <Image
-                  priority
-                  src="/images/profile-pic.png"
-                  alt="Grazielle pic"
-                  width="597"
-                  height="599"
-                  className="rounded-circle"
-                />
-              </ProfilePic>
-              {/* DECORATION IMAGES */}
-              <ImageLightning>
-                <Image
-                  priority
-                  src="/images/decoration/lightning.png"
-                  alt="Lightning decoration"
-                  width="647"
-                  height="912"
-                />
-              </ImageLightning>
-              <ImageSemicircle>
-                <Image
-                  priority
-                  src="/images/decoration/semicircle.png"
-                  alt="Semicircle decoration"
-                  width="873"
-                  height="909"
-                />
-              </ImageSemicircle>
-              <ImageTextblock>
-                <Image
-                  priority
-                  src="/images/decoration/textblock.png"
-                  alt="Textblock decoration"
-                  width="1288"
-                  height="912"
-                />
-              </ImageTextblock>
+            <Col sm={12} lg={5} className="mb-4 mb-md-0">
+              <ImageSection className="mx-auto">
+                <ProfilePic>
+                    <Image
+                    priority
+                    src="/images/profile-pic.jpg"
+                    alt="Grazielle pic"
+                    width="1050"
+                    height="700"
+                    className="rounded-circle"
+                    />
+                </ProfilePic>
+                {/* DECORATION IMAGES */}
+                <ImageLightning>
+                    <Image
+                    priority
+                    src="/images/decoration/lightning.png"
+                    alt="Lightning decoration"
+                    width="647"
+                    height="912"
+                    />
+                </ImageLightning>
+                <ImageSemicircle>
+                    <Image
+                    priority
+                    src="/images/decoration/semicircle.png"
+                    alt="Semicircle decoration"
+                    width="873"
+                    height="909"
+                    />
+                </ImageSemicircle>
+                <ImageTextblock>
+                    <Image
+                    priority
+                    src="/images/decoration/textblock.png"
+                    alt="Textblock decoration"
+                    width="1288"
+                    height="912"
+                    />
+                </ImageTextblock>
+              </ImageSection>
             </Col>
-            <Col sm={12} md={7}>
+            <Col sm={12} lg={7} className="p-0 px-3 px-md-0 pl-lg-8">
               <h1>{name}</h1>
-              <p>{description}</p>
+              <ProfileInfo dangerouslySetInnerHTML={{ __html: description }} />
 
               <SocialMedia className="d-flex justify-content-between ml-3">
                 <h2 className="sr-only">Grazielle's Social media</h2>
@@ -83,6 +87,8 @@ export const Profile = ({
                     target="_blank"
                     aria-label={label}
                     className="h2"
+                    rel="noopener"
+                    key={index}
                   >
                     {icon == "github" && (
                       <FaGithub className="text-gray mr-6" />

@@ -12,6 +12,7 @@ import Profile from "@/components/profile";
 import Experiences from "@/components/experiences";
 import Projects from "@/components/projects";
 import About from "@/components/about";
+import Blog from "@/components/blog";
 
 // Types
 // interface Props {
@@ -35,130 +36,156 @@ import About from "@/components/about";
 export const HomeLayout = () => {
   return (
     <Layout>
-      <Container>
-        <Profile
-          name="Grazielle"
-          description="Frontend designer since 2019 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis enim ut ante auctor malesuada. Vivamus pulvinar nunc sed nulla feugiat, nec consectetur erat interdum. Nam venenatis magna in purus convallis, eu aliquet est vulputate. Sed sit amet nisi quis elit accumsan aliquet vitae vel justo. Nam dignissim efficitur dapibus. "
-          social_media={[
-            {
-              icon: "github",
-              url: "https://github.com/graziellecarvalho",
-              label: "gitbut social media",
-            },
-            {
-              icon: "linkedin",
-              url: "https://www.linkedin.com/in/graziellepcarvalho/",
-              label: "linkedin social media",
-            },
-            {
-              icon: "stackoverflow",
-              url:
-                "https://stackoverflow.com/users/14670710/grazielle-carvalho",
-              label: "stackoverflow social media",
-            },
-          ]}
-        />
+      <Profile
+        name="Grazielle"
+        description="<p>Front-end developer with 2+ years experience working with <strong>HTML, CSS, JavaScript</strong>, plus modern libraries and frameworks such as <strong>ReactJS and NextJs</strong>. Adept at contributing to a highly collaborative work environment, willing to assist in finding solutions determining customer satisfaction.</p>
 
-        <Experiences
-          level={[
+        <p>Throughout my career as a front end developer I've emphasized the importance of developing projects that is not only <strong>performative and responsive</strong>, but also <strong>fluid and accessible</strong> for everyone to use.</p>
+        
+        <p>Besides my developer experience, I also have experience with Q.A. and project management, since I've also worked on these two fields.</p>
+        
+        <p>Motivated, open-minded and adapts easily to any environments and coding styles.</p> "
+        social_media={[
+          {
+            icon: "github",
+            url: "https://github.com/graziellecarvalho",
+            label: "gitbut social media",
+          },
+          {
+            icon: "linkedin",
+            url: "https://www.linkedin.com/in/graziellepcarvalho/",
+            label: "linkedin social media",
+          },
+          {
+            icon: "stackoverflow",
+            url: "https://stackoverflow.com/users/14670710/grazielle-carvalho",
+            label: "stackoverflow social media",
+          },
+        ]}
+      />
+      <Experiences
+        level={[
+          {
+            type: "Beginner",
+            list: [
+              {
+                item: "NodeJS",
+              },
+              {
+                item: "VueJs",
+              },
+              {
+                item: "Cypress",
+              },
+            ],
+          },
+          {
+            type: "Intermediate",
+            list: [
+              {
+                item: "TypeScript",
+              },
+              {
+                item: "NextJS",
+              },
+              {
+                item: "PHP",
+              },
+              {
+                item: "WordPress",
+              },
+              {
+                item: "Sanity",
+              },
+            ],
+          },
+          {
+            type: "Advanced",
+            list: [
+              {
+                item: "ReactJs",
+              },
+              {
+                item: "JavaScript",
+              },
+              {
+                item: "HTML",
+              },
+              {
+                item: "CSS/SCSS",
+              },
+              {
+                item: "Bootstrap",
+              },
+              {
+                item: "JQuery",
+              },
+            ],
+          },
+          {
+            type: "Others",
+            list: [
+              {
+                item: "Figma",
+              },
+              {
+                item: "Photoshop",
+              },
+              {
+                item: "Trello",
+              },
+              {
+                item: "Monday",
+              },
+              {
+                item: "Jira",
+              },
+            ],
+          },
+          {
+            type: "Future studies",
+            featured: true,
+            list: [
+              {
+                item: "React Native",
+              },
+              {
+                item: "Flutter",
+              },
+              {
+                item: "ESLint",
+              },
+            ],
+          },
+        ]}
+      />
+      <Projects
+        projects={[
             {
-              type: "Beginner",
-              list: [
-                {
-                  item: "NodeJS",
-                },
-                {
-                  item: "VueJs",
-                },
-                {
-                  item: "Sanity",
-                },
-              ],
+              image: {
+                src: "/images/temp/project.png",
+                alt: "Project",
+                width: 1420,
+                height: 815,
+              },
+              title: "Pokedéx",
+              description:
+                "This development was focused on the mobile first concept, where I sketched the layout and functionalities on a mobile resolution, and then adapted it for bigger screen on the development. It's a project where the focus was on the application of the api's consumption, and it's where I`ve found several possibilities to develop filters.",
+              repositoryLink: {
+                text: "Repository",
+                href: "#",
+                target: "_blank",
+              },
+              designLink: {
+                text: "Design on Figma",
+                href: "#",
+                target: "_blank",
+              },
             },
-            {
-              type: "Intermediate",
-              list: [
-                {
-                  item: "TypeScript",
-                },
-                {
-                  item: "NextJS",
-                },
-                {
-                  item: "JQuery",
-                },
-                {
-                    item: 'PHP'
-                }
-              ],
-            },
-            {
-              type: "Advanced",
-              list: [
-                {
-                  item: "ReactJs",
-                },
-                {
-                  item: "JavaScript",
-                },
-                {
-                  item: "HTML",
-                },
-                {
-                  item: "CSS",
-                },
-                {
-                  item: "WordPress",
-                },
-              ],
-            },
-            {
-              type: "Future studies",
-              featured: true,
-              list: [
-                {
-                  item: "React Native",
-                },
-                {
-                  item: "Angular",
-                },
-              ],
-            },
-          ]}
-        />
-
-        <Projects
-            projects={[
-                {
-                    image: {
-                        src: '/images/temp/project.png',
-                        alt: 'Project',
-                        width: 579,
-                        height: 361,
-                    },
-                    title: 'Project title',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus ex euismod leo semper, ac sagittis urna molestie. Donec vitae <strong>lorem pellentesque, viverra est vel,</strong> molestie justo. Nam nibh leo, faucibus nec neque sed, efficitur pulvinar orci. Aliquam eget velit elit. Integer ac euismod erat. Nullam placerat et augue at sollicitudin. ',
-                    link: {
-                        text: 'Repository',
-                        href: '#',
-                        target: '_blank',
-                    }
-                },
-                {
-                    image: {
-                        src: '/images/temp/project.png',
-                        alt: 'Project',
-                        width: 579,
-                        height: 361,
-                    },
-                    title: 'Project title',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus ex euismod leo semper, ac sagittis urna molestie. Donec vitae lorem pellentesque, viverra est vel, molestie justo. Nam nibh leo, faucibus nec neque sed, efficitur pulvinar orci. Aliquam eget velit elit. Integer ac euismod erat. Nullam placerat et augue at sollicitudin. ',
-                },
-            ]}
-        />
-
-        <About />
-      </Container>
+        ]}
+      />
+      <About />
+      <Blog />
     </Layout>
   );
 };

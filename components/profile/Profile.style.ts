@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 export const Component = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
+
+  p {
+    font-size: 20px;
+  }
+
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -25,6 +33,25 @@ export const SocialMedia = styled.div`
 
 export const ProfilePic = styled.div`
   z-index: 4;
+
+  div {
+    height: 250px;
+    width: 250px;
+
+    @media (min-width: 768px) {
+        height: 400px;
+        width: 400px;
+    }
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+    margin-top: 40px;
+  }
 `;
 
 export const ImageLightning = styled.div`
@@ -42,12 +69,20 @@ export const ImageLightning = styled.div`
 `;
 
 export const ImageSemicircle = styled.div`
-  position: absolute;
-  z-index: -1;
-  left: -6%;
-  top: -12%;
-  width: 84%;
-  height: 80%;
+    position: absolute;
+    z-index: -1;
+    left: -3%;
+    top: -22%;
+    width: 84%;
+    height: 80%;
+
+
+    @media (min-width: 768px) {
+        left: -13%;
+        top: -22%;
+        width: 100%;
+      }
+
 
   @media (min-width: 992px) {
     left: -20%;
@@ -66,4 +101,20 @@ export const ImageTextblock = styled.div`
   @media (min-width: 992px) {
     width: 130px;
   }
+`;
+
+export const ProfileInfo = styled.div`
+  p {
+    color: #1a2d71;
+  }
+`;
+
+export const ImageSection = styled.div`
+  margin-top: 40px;
+    width: 300px;
+    position: relative;
+
+    @media (min-width:768px) {
+        width: 400px;
+    }
 `;

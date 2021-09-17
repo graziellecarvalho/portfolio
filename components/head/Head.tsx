@@ -1,18 +1,18 @@
-import React from 'react';
-import NextHead from 'next/head';
+import React from "react";
+import NextHead from "next/head";
 
 // Utils
-import { SeoProps } from '@/typings/SeoProps';
+import { SeoProps } from "@/typings/SeoProps";
 
 export const Head = () => {
-	return (
-		<NextHead>
-			{/* PAGE TITLE */}
-			{/* <title>{this.props.seo.title?.replace('[SITE_NAME]', '_W')}</title> */}
-			<title>Boilerplate</title>
+  return (
+    <NextHead>
+      {/* PAGE TITLE */}
+      {/* <title>{this.props.seo.title?.replace('[SITE_NAME]', '_W')}</title> */}
+      <title>Grazielle's Portfolio</title>
 
-			{/* YOAST METAS & SCHEMA */}
-			{/* {this.props.seo.headHtml !== undefined && ReactHtmlParser( this.props.seo.headHtml )} */}
-		</NextHead>
-	);
+      {/* YOAST METAS & SCHEMA */}
+      {/* {this.props.seo.headHtml !== undefined && ReactHtmlParser( this.props.seo.headHtml )} */}
+    </NextHead>
+  );
 };

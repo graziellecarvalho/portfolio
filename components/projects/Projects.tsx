@@ -16,14 +16,17 @@ interface Props extends ProjectsProps {
 export const Projects = ({ cssClass = "", projects }: Props) => {
   return (
     <Component className={`${cssClass} py-9`}>
-      <SectionTitle title="Projects" cssClass="mb-6" />
+      <Container>
+        <SectionTitle title="Personal Projects" />
 
-      {projects.map((props, index) => (
-        <ProjectInfo
+        {projects.map((props, index) => (
+          <ProjectInfo
             {...props}
-            position={(index + 1) % 2 ? '' : 'odd'}
-        />
-      ))}
+            position={(index + 1) % 2 ? "" : "odd"}
+            key={index}
+          />
+        ))}
+      </Container>
     </Component>
   );
 };

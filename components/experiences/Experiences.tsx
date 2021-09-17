@@ -23,7 +23,7 @@ export const Experiences = ({ cssClass = "", level }: Props) => {
         {/* BEGINNER */}
 
         {level.map(({ type, list, featured }, index) => (
-          <Row className="align-items-center mb-2">
+          <Row className="align-items-center mb-2" key={index}>
             <Level className="d-flex align-items-center col-12 col-md-3 col-lg-2 justify-content-md-end">
               <h3 className="my-3 h5">{type}</h3>
               <RotateIcon className="d-md-none text-secondary ml-2">
