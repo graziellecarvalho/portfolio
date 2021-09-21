@@ -16,7 +16,7 @@ interface Props extends ExperiencesProps {
 
 export const Experiences = ({ cssClass = "", level }: Props) => {
   return (
-    <Component className={`${cssClass} py-9`}>
+    <Component className={`${cssClass} py-9`} id="next-section">
       <Container>
         <SectionTitle title="Experiences" />
 

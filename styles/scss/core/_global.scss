@@ -33,3 +33,14 @@ object {
 /* ::placeholder {
 	color: $medium;
 } */
+
+@keyframes slideDown {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
+  }

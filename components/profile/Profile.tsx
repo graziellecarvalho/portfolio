@@ -2,6 +2,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
 // Internal dependencies
@@ -13,7 +14,9 @@ import {
   ProfilePic,
   ImageTextblock,
   ProfileInfo,
-  ImageSection
+  ImageSection,
+  ArrowImage,
+  SeeMore
 } from "./Profile.style";
 import { ProfileProps } from "./Profile.types";
 
@@ -105,14 +108,14 @@ export const Profile = ({
             </Col>
           </Row>
         </Container>
+        <Link href="#next-section">
+            <SeeMore>
+                <ArrowImage>
+                    <Image src="/images/decoration/arrow.png" alt="teste" width={40} height={40} />
+                </ArrowImage>
+            </SeeMore>
+        </Link>
       </Component>
-      {/* <Teste className="d-flex w-100 justify-content-between teste">
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-      </Teste> */}
     </>
   );
 };

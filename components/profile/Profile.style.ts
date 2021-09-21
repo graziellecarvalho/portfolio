@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Component = styled.div`
   height: 100%;
@@ -117,4 +117,27 @@ export const ImageSection = styled.div`
     @media (min-width:768px) {
         width: 400px;
     }
+`;
+
+const slideDown = keyframes`
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(0, 10px) rotate(90deg);
+    }
+`;
+
+export const ArrowImage = styled.div`
+    animation: ${slideDown} 1s ease-in-out infinite;
+    margin-top: 10px;
+`;
+
+export const SeeMore = styled.div`
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    cursor: pointer;
 `;

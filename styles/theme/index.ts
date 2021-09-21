@@ -1,5 +1,17 @@
 import { rem } from 'polished';
 import { Breakpoints, Theme } from './theme.types';
+import { keyframes } from 'styled-components';
+
+export const slideDown = keyframes`
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+`;
 
 const breakpoints: Breakpoints = {
 	xs: { min: null, max: 575.8 },
