@@ -106,6 +106,30 @@ export const ImageTextblock = styled.div`
 export const ProfileInfo = styled.div`
   p {
     color: #1a2d71;
+    strong::before {  
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    
+    strong:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    
+    strong::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        inset: 0 0 0 0;
+        background: hsl(200 100% 80%);
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+    
+    strong {
+        position: relative;
+    }
   }
 `;
 

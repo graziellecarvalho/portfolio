@@ -4,34 +4,11 @@ import { Container } from "react-bootstrap";
 
 // Internal modules
 import { Layout } from "./HomeLayout.styles";
-import { OptionsProps } from "@/typings/OptionsProps";
-import { RouteProps } from "@/typings/RouteProps";
-import { MenuProps } from "@/typings/MenuProps";
-import { HomeLayoutProps } from "./HomeLayout.types";
 import Profile from "@/components/profile";
 import Experiences from "@/components/experiences";
 import Projects from "@/components/projects";
 import About from "@/components/about";
 import Blog from "@/components/blog";
-
-// Types
-// interface Props {
-// 	route: RouteProps;
-// }
-
-// export const HomeLayout = ({ route }: Props) => {
-// 	const content = route.content as HomeLayoutProps;
-
-// 	return (
-// 		<Layout context={route}>
-// 			<Container>
-// 				<strong>Home</strong> Layout
-// 				<h1>{route.title}</h1>
-// 				<pre>{JSON.stringify(content, null, '\t')}</pre>
-// 			</Container>
-// 		</Layout>
-// 	);
-// };
 
 export const HomeLayout = () => {
   return (

@@ -6,10 +6,7 @@ import { InferGetStaticPropsType } from 'next';
 import { getPathsFromEndpoint, getRouteData } from '@/data/routes';
 
 // Layouts
-import DefaultLayout from 'layouts/default';
 import PostLayout from '@/layouts/post';
-import CategoryLayout from '@/layouts/category';
-import SubcategoryLayout from '@/layouts/subcategory';
 
 // Define the pages to be generated
 export async function getStaticPaths() {

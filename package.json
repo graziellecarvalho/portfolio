@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"create": "plop",
-		"dev": "next",
+		"dev": "next --port 3003",
 		"build": "next build",
 		"start": "next start -p 2288",
 		"lint": "next lint"

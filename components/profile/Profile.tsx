@@ -80,7 +80,16 @@ export const Profile = ({
             </Col>
             <Col sm={12} lg={7} className="p-0 px-3 px-md-0 pl-lg-8">
               <h1>{name}</h1>
-              <ProfileInfo dangerouslySetInnerHTML={{ __html: description }} />
+              {/* <ProfileInfo dangerouslySetInnerHTML={{ __html: description }} /> */}
+              <ProfileInfo>
+              <p>Front-end developer with 2+ years experience working with <strong>HTML, CSS, JavaScript</strong>, plus modern libraries and frameworks such as <strong>ReactJS and NextJs</strong>. Adept at contributing to a highly collaborative work environment, willing to assist in finding solutions determining customer satisfaction.</p>
+
+                <p>Throughout my career as a front end developer I've emphasized the importance of developing projects that is not only <strong>performative and responsive</strong>, but also <strong>fluid and accessible</strong> for everyone to use.</p>
+
+                <p>Besides my developer experience, I also have experience with Q.A. and project management, since I've also worked on these two fields.</p>
+
+                <p>Motivated, open-minded and adapts easily to any environments and coding styles.</p>
+              </ProfileInfo>
 
               <SocialMedia className="d-flex justify-content-between ml-3">
                 <h2 className="sr-only">Grazielle's Social media</h2>
@@ -116,6 +125,8 @@ export const Profile = ({
             </SeeMore>
         </Link>
       </Component>
+
+     
     </>
   );
 };
