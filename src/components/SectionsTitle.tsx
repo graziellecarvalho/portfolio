@@ -15,7 +15,7 @@ interface AssetPropsExtended extends AssetProps {
 
 const colors = {
   blue: '#142664',
-  pink: '#FF2E93',
+  pink: '#d036ee',
   green: '#00E6B3'
 }
 
@@ -26,7 +26,7 @@ const lgSize = { width: 24, height: 24, borderRadius: 6 }
 const xlSize = { width: 34, height: 34, borderRadius: 6 }
 const wideSize = { width: 60, height: 14, borderRadius: 4 }
 
-const assets = [
+const assets_primary = [
   { color: colors.blue, customStyle: { top: -32, left: 128 }, ...xsSize },
   { color: colors.blue, customStyle: { top: 190, left: -100 }, ...xsSize },
   { color: colors.pink, customStyle: { top: 10, left: -80 }, ...smSize },
@@ -40,17 +40,45 @@ const assets = [
   { color: colors.pink, customStyle: { top: 240, left: 110 }, ...wideSize },
 ]
 
-function SectionsTitle ({title}: { title: string} ) {
+
+const assets_secondary = [
+  { color: colors.blue, customStyle: { top: 88, left: 128 }, ...xsSize },
+  { color: colors.blue, customStyle: { top: 190, left: -100 }, ...xsSize },
+  { color: colors.pink, customStyle: { top: 50, left: 50 }, ...xsSize },
+  { color: colors.pink, customStyle: { top: 0, left: -80 }, ...smSize },
+  { color: colors.blue, customStyle: { top: 155, left: 65 }, ...smSize },
+  { color: colors.blue, customStyle: { top: 75, left: -35 }, ...smSize },
+  { color: colors.green, customStyle: { top: 55, left: -138 }, ...smSize },
+  { color: colors.green, customStyle: { top: 190, left: 120 }, ...mdSize },
+  { color: colors.pink, customStyle: { top: 100, left: -110, zIndex: 2 }, ...lgSize },
+  { color: colors.green, customStyle: { top: 210, left: -40, zIndex: 2 }, ...lgSize },
+  { color: colors.green, customStyle: { top: 10, left: 100, zIndex: 2 }, ...xlSize },
+  { color: colors.green, customStyle: { top: 10, left: 100, zIndex: 2 }, ...xlSize },
+  { color: colors.blue, customStyle: { top: 15, left: -138 }, ...wideSize },
+  { color: colors.pink, customStyle: { top: 240, left: 110 }, ...wideSize },
+]
+
+function SectionsTitle ({ title, variant, color }: { title: string, variant?: string, color?: string } ) {
   return(
-    <div className='relative w-full title-wrapper flex items-center' style={{ height: '250px'}}>
-      <h2 style={{ zIndex: 2 }} className={[goldman.className, "text-3xl md:mr-4"].join(' ')}>{title}</h2>
-      <div className='hidden md:block absolute top-0 w-full h-full'>
-        {assets.map((item) => assetDetailSquare(item))}
-        {assetDetailCustom({ color: colors.green, customStyle: { top: -20, left: 120 }})}
-        {assetDetailCustom({ color: colors.pink, customStyle: { top: 220, left: -100 }})}
-        {assetDetailCustom({ cn: 'rotate-180', color: colors.blue, customStyle: { top: 180, left: 170 }})}
-        {assetDetailCustomLG({ color: colors.pink, customStyle: { top: 70, left: 80 }})}
-      </div>
+    <div className='relative w-full title-wrapper flex items-center lg:h-64 h-32'>
+      <h2 style={{ zIndex: 2 }} className={[goldman.className, `text-4xl text${color ? '-'+color : '-[#000000]'} md:mr-4`].join(' ')}>{title}</h2>
+      {variant === 'primary' ? (
+        <div className='hidden lg:block absolute top-0 w-full h-full'>
+          {assets_primary.map((item: AssetPropsExtended) => assetDetailSquare(item))}
+          {assetDetailCustom({ color: colors.green, customStyle: { top: -20, left: 120 }})}
+          {assetDetailCustom({ color: colors.pink, customStyle: { top: 220, left: -100 }})}
+          {assetDetailCustom({ cn: 'rotate-180', color: colors.blue, customStyle: { top: 180, left: 170 }})}
+          {assetDetailCustomLG({ color: colors.pink, customStyle: { top: 70, left: 80 }})}
+        </div>
+      ) : variant === 'secondary' ? (
+        <div className='hidden lg:block absolute top-0 w-full h-full'>
+          {assets_secondary.map((item: AssetPropsExtended) => assetDetailSquare(item))}
+          {assetDetailCustom({ cn: 'rotate-180', color: colors.pink, customStyle: { top: -20, left: 120 }})}
+          {assetDetailCustom({ color: colors.pink, customStyle: { top: 220, left: -100 }})}
+          {assetDetailCustom({ color: colors.blue, customStyle: { top: 180, left: 170 }})}
+          {assetDetailCustomLG({ color: colors.green, customStyle: { top: 150, left: -60 }})}
+        </div>
+      ) : ""}
     </div>
   )
 }
