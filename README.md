@@ -1,4 +1,4 @@
-## :book: Hi there <img src="/public/wave.gif" width="45"/>
+## :book: Hi there <img src="/public/wave.gif" width="35"/>
 - My name is Grazielle, but you can call me Ellie
 - Front-end Developer and UX/UI designer
 - Started as Quality Assurance
@@ -6,7 +6,7 @@
 
 Take a look at my portfolio
 
-## Local development
+## 🖥️ Local development
 
 - Install dependencies using `yarn install`
 - Run the development server `yarn dev`
@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Publish
 - Implement CMS
 
-## Technologies & Tools Used
+## 🔧 Technologies & Tools Used
 
 [![Next][Next.js]][Next-url]
 [![React][React.js]][React-url]

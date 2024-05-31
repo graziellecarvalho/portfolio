@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react';
 import Image from "next/image";
+import { goldman } from '@/app/fonts';
 import './Hero.css'
 import socialMockData from '../mockData/socialmockData'
 
 function Hero () {
   const [focusedIcon, setFocusedIcon] = useState('')
   return (
-      <div className="mx-auto w-full ">
+      <div className={[goldman.className, "mx-auto w-full"].join(' ')}>
         <div className='bg-[#172554] h-screen flex items-center relative '>
         <div>
           <div id="stars"></div>

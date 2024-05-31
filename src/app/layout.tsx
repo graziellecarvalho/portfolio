@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Goldman } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-const goldman = Goldman({ weight: '400', subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Grazielle's Portfolio",
@@ -18,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={goldman.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
